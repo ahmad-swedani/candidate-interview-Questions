@@ -6,6 +6,4 @@ This repo contains five questions along with the solutions with three different 
 | ---------- | ------------------------------------ |
 | Java       | [Click here](Java/Solution.java)     |
 | JavaScript | [Click here](javascrept/solution.js) |
-
-|
-|Python|[Click here](python/solution.py)|
+| Python     | [Click here](python/solution.py)     |
