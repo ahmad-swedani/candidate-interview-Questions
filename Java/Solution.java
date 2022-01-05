@@ -37,6 +37,21 @@ public class Solution {
         System.out.println("the remainder of dividing 8 on 6  is:" + remainderFinder(8, 6));
         System.out.println("the remainder of dividing 2 on 4  is:" + remainderFinder(2, 4));
 
+        System.out.println("------------- Q6 -------------");
+        System.out.println("the number of digits in the number is: " + numberOfDigits(123456789));
+        System.out.println("the number of digits in the number is: " + numberOfDigits(1234567));
+        System.out.println("the number of digits in the number is: " + numberOfDigits(12345678901));
+
+        System.out.println("------------- Q7 -------------");
+        System.out.println("the reverse of 123456789 is: " + reverseNumber(123456789));
+        System.out.println("the reverse of 1234567 is: " + reverseNumber(1234567));
+
+        System.out.println("------------- Q8 -------------");
+        System.out.println("the the number of vowels in hello is: " + numberOfVowels("hello"));
+        System.out.println("the the number of vowels in world is: " + numberOfVowels("world"));
+
+
+
     }
 
 //     #######################  Q1  ########################
@@ -124,3 +139,57 @@ public class Solution {
 
 
 }
+
+// #######################  Q6  ########################
+// number of digits
+// Write a function that takes in a number and returns the number of digits in the number.
+// examples:
+// input: 123456789    output: 9
+// input: 1234567      output: 7
+// input: 12345678901  output: 11
+
+public static int numberOfDigits(int number) {
+    int count = 0;
+    while (number > 0) {
+        number /= 10;
+        count++;
+    }
+    return count;
+}
+
+// #######################  Q7  ########################
+// Reverse a number
+// Write a function that takes in a number and returns the reverse of the number.
+// examples:
+// input: 123456789    output: 987654321
+// input: 1234567      output: 7654321
+
+public static int reverseNumber(int number) {
+    int reverse = 0;
+    while (number > 0) {
+        int digit = number % 10;
+        reverse = reverse * 10 + digit;
+        number /= 10;
+    }
+    return reverse;
+}
+
+// #######################  Q8  ########################
+// Write a function that takes in a string and returns the number of vowels in the string.
+// examples:
+// input: hello        output: 2
+// input: world        output: 1
+// input: aa           output: 2
+
+public static int numberOfVowels(String str) {
+    int count = 0;
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+
+

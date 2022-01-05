@@ -108,3 +108,81 @@ console.log("------------------testing Q5------------------");
 console.log("the remainder of dividing 10 on 5  is:", remainderFinder(10, 5));
 console.log("the remainder of dividing 8 on 6  is:", remainderFinder(8, 6));
 console.log("the remainder of dividing 2 on 4  is:", remainderFinder(2, 4));
+
+// #######################  Q6  ########################
+// number of digits
+// Write a function that takes in a number and returns the number of digits in the number.
+// examples:
+// input: 123456789    output: 9
+// input: 1234567      output: 7
+// input: 12345678901  output: 11
+
+function numberOfDigits(num) {
+  let arr = num.toString().split("");
+  return arr.length;
+}
+
+console.log("------------------testing Q6------------------");
+console.log("the number of digits for 123456789: ", numberOfDigits(123456789));
+console.log("the number of digits for 1234567: ", numberOfDigits(1234567));
+
+// #######################  Q7  ########################
+// Reverse a number
+// Write a function that takes in a number and returns the reverse of the number.
+// examples:
+// input: 123456789    output: 987654321
+// input: 1234567      output: 7654321
+function reverseNumber(num) {
+  let arr = num.toString().split("");
+  let newArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newArr.push(arr[i]);
+  }
+  return newArr.join("");
+}
+
+console.log("------------------testing Q7------------------");
+console.log("the reverse of 123456789 is: ", reverseNumber(123456789));
+console.log("the reverse of 1234567 is: ", reverseNumber(1234567));
+
+// #######################  Q8  ########################
+// Write a function that takes in a string and returns the number of vowels in the string.
+// examples:
+// input: hello        output: 2
+// input: world        output: 1
+// input: aa           output: 2
+
+// Way 1:
+function numberOfVowels(str) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let arr = str.split("");
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (vowels.includes(arr[i].toLowerCase())) {
+      count++;
+    }
+  }
+  return count;
+}
+// Way 2:
+function numberOfVowels(str) {
+  let arr = str.split("");
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (
+      arr[i] === "a" ||
+      arr[i] === "e" ||
+      arr[i] === "i" ||
+      arr[i] === "o" ||
+      arr[i] === "u"
+    ) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log("------------------testing Q8------------------");
+console.log("the number of vowels in hello is: ", numberOfVowels("hello"));
+console.log("the number of vowels in world is: ", numberOfVowels("world"));
+console.log("the number of vowels in aa is: ", numberOfVowels("aa"));

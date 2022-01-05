@@ -85,7 +85,7 @@ print("------------------testing Q4------------------")
 print( "153 is armstrong number: ",is_armstrong(153))
 print( "18 is armstrong number: ",is_armstrong(18))
 
-# solution
+
 # #######################  Q5  ########################
 # Remainder finder 
 # Write a function that takes in two integers, and return the remainder of dividing the first number by the second one without using the % symbol 
@@ -101,3 +101,36 @@ print("------------------testing Q5------------------")
 print("the remainder of dividing 10 on 5  is:",remainder(10,5))
 print("the remainder of dividing 8 on 6  is:",remainder(8,6))
 print("the remainder of dividing 2 on 4  is:",remainder(2,4))
+
+
+
+# #######################  Q6  ########################
+# number of digits
+# Write a function that takes in a number and returns the number of digits in the number.
+def number_of_digits(number):
+    return len(str(number))
+
+
+print("------------------testing Q6------------------")
+print("the number of digits in 153 is:",number_of_digits(153))
+print("the number of digits in 18 is:",number_of_digits(18))
+print("the number of digits in 2 is:",number_of_digits(2))
+
+
+# #######################  Q7  ########################
+# Reverse a number
+# Write a function that takes in a number and returns the reverse of the number.
+def reverse(number):
+    return int(str(number)[::-1])
+print("------------------testing Q7------------------")
+print("the reverse of 153 is:",reverse(153))
+
+# #######################  Q8  ########################
+# Write a function that takes in a string and returns the number of vowels in the string.
+def number_of_vowels(string):
+    vowels = "aeiou"
+    count = 0
+    for i in string:
+        if(i in vowels):
+            count += 1
+    return count
